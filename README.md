@@ -1,8 +1,8 @@
-# Simulador 3D – Módulo experimental de transporte y clasificación de cargas
+# Simulador 3D 
 
 Simulación interactiva en 3D (TypeScript + Three.js + Vite) del sistema del esquema: masa colgante que jala un carro, rampa, lanzamiento horizontal de una esfera, plataforma rotatoria, canal de salida, resorte y barra de control de descarga.
 
-## Cómo correrlo
+## Cómo correrlo en cualquiera de sus pc
 
 Requiere Node.js 18 o superior.
 
@@ -12,14 +12,14 @@ npm run dev      # abre http://localhost:5173
 npm run build    # genera la carpeta dist/ para publicar
 ```
 
-## Cómo se usa
+## Cómo se usa , pasito a pasito
 
 - Panel izquierdo: parámetros del sistema (cualquier cambio reinicia el experimento).
 - Panel derecho: las 7 etapas (se resalta la activa), datos en vivo y resultados del modelo comparados con los del informe.
 - Barra inferior: iniciar, pausar, reiniciar, velocidad (0,25× a 2×), vistas de cámara, seguir objeto y etiquetas.
 - Mouse: arrastrar para rotar, rueda para acercar.
 
-## Estructura
+## Estructura del proyecto hecho en TS 
 
 ```
 index.html
@@ -34,7 +34,7 @@ src/
   style.css
 ```
 
-## Física que usa
+## Física que usa esta para que revisen xd
 
 | Etapa | Modelo |
 |---|---|
@@ -51,7 +51,7 @@ src/
 m_c = 0,289786 kg · y₀ = 0,90 m · g = 9,81 m/s² · mₑ = 0,050 kg · ω = 4,000 rad/s · r = 0,30 m · m_h = 10, 20 y 40 g.
 Con esos valores el modelo da: a ideal = 0,32723 / 0,63334 / 1,18986 m/s², vₛ ≈ 1,4872 m/s, t_c = 0,4284 s, R = 0,637 m, F_c = 0,240 N y μₛ mínimo = 0,489.
 
-## Supuestos que no vienen del informe
+## Supuestos que no vienen del informe 
 
 - μ = 0,023 (riel): sale de la desaceleración de −0,23 m/s² de las gráficas v-t.
 - e = 0,638 (restitución del choque carro–esfera): se calibró para reproducir vₛ = 1,4873 m/s.
