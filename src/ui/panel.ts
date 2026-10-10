@@ -89,6 +89,10 @@ export class Panel {
     hint.textContent =
       'Arrastra para rotar la cámara, rueda del mouse para acercar. Cambiar un parámetro reinicia el experimento.';
     this.left.append(hint);
+    const mark = document.createElement('div');
+    mark.className = 'group-mark';
+    mark.textContent = 'Grupo 05';
+    this.left.append(mark);
   }
 
   private row(label: string, id: string, parent: HTMLElement): void {
