@@ -44,6 +44,7 @@ body {
   border-radius: 8px;
   padding: 6px 22px;
   text-align: center;
+  text-transform: uppercase;
   pointer-events: none;
   max-width: 56vw;
 }
