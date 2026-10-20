@@ -12,12 +12,12 @@ export interface Params {
   k: number;
 }
 
-// Datos del informe: m_c = 0,289786 kg; y0 = 0,90 m; m_e = 0,050 kg; ω = 4,000 rad/s
+// Datos del informe: m_c = 0,28976 kg; θ = 10°; y0 = 0,90 m; m_e = 0,050 kg; ω = 4,000 rad/s; r = 0,12 m
 export const DEFAULTS: Params = {
   mh: 0.02,
-  mc: 0.289786,
+  mc: 0.28976,
   mu: 0.023,
-  theta: 5,
+  theta: 10,
   h: 0.9,
   me: 0.05,
   omega: 4,
@@ -59,8 +59,8 @@ export const REPORT = {
   rTeo: 0.6371,
   rExp: 0.6684,
   tc: 0.4284,
-  fcModel: 0.24,
-  muSMin: 0.489,
+  fcModel: 0.096,
+  muSMin: 0.196,
 };
 
 export const GEOM = {
@@ -80,11 +80,11 @@ export const GEOM = {
   rs: 0.04,
   R: 0.5,
   rimW: 0.02,
-  rg: 0.3,
+  rg: 0.12,
   grooveHalf: 0.045,
-  xp: 0.937,
-  restitution: 0.638,
-  muChute: 0.1,
+  xp: 0.757, // R teórico (0,6371) + r: la esfera cae sobre la pista circular
+  restitution: 0.186, // calibrada para vₛ = 1,4873 m/s con θ = 10°
+  muChute: 0.05, // menor que tan(5°) = 0,0875: con r = 0,12 la esfera sale lenta y no debe frenarse en el canal
   chuteAlpha: (5 * Math.PI) / 180,
   chuteLen: 0.9,
   chuteZ: 0.56,
